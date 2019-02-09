@@ -1,0 +1,4 @@
+#Fri Sep 14 09:48:49 CDT 2018
+base.0=C\:\\Users\\Siri\\AndroidStudioProjects\\TranslateApp\\TranslateApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex

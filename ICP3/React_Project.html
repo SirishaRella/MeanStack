@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="React_Project.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="React_Project.js"></script>
+    <title>Rest API Project</title>
+</head>
+<body ng-app="reactApp">
+
+<!-- Parent Controller -->
+<div class="container-fluid text-center" ng-controller="reactController">
+    <h1 style="color:steelblue">Nutritionix Project</h1><br>
+    <form>
+        <span style="color:steelblue">Search Text: </span>
+        <input type="text" placeholder="Enter Search Keyword" ng-model="searchKeyword" ng-blur="audioPlay()" required><br><br>
+        <button type="button" class="btn btn-info" ng-click="getCaoriesInfo()">Search</button>
+    </form>
+    <div class="w3-container w3-center w3-animate-left" ng-show="isVisible">
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Serving Weight</th>
+                <th>Calories</th>
+            </tr>
+            <tr>
+                <td>{{itemName}}</td>
+                <td>{{servingWeight}}</td>
+                <td>{{totalCalories}}</td>
+            </tr>
+        </table>
+    </div><br><br>
+
+    <!-- child Controller -->
+    <div ng-controller="audioController" ng-bind-html="audioHtml" class="w3-container w3-center w3-animate-left">
+    </div>
+
+</div>
+</body>
+</html>

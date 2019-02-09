@@ -1,0 +1,21 @@
+body{
+    background-image: url("background_image.jpg");
+    background-color: aliceblue;
+}
+table, th , td {
+    padding: 4px;
+    border: 0.5px solid grey;
+    border-collapse: collapse;
+    width:70%;
+    margin:0 auto;
+}
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+h1,span{
+    color:steelblue;
+    font-weight: bold;
+}
