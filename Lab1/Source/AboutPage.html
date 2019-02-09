@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" >
+    <div class="header">
+        <div class="navbar-header">
+            <h1 class="title">Knowledge Graph Search</h1>
+        </div>
+        <ul class="nav navbar-nav" >
+            <li><a href="ProfileInfo.html" class="tabs">Profile Info</a></li>
+            <li><a href="HomePage.html" class="tabs">Home</a></li>
+            <li class="active"><a href="AboutPage.html" class="tabs active">About</a></li>
+            <li><a href="ContactPage.html" class="tabs">Contact us</a></li>
+            <li onclick="signOut()"><a href="index.html" class="tabs">LogOut</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="footer text-center" style="width:60rem; padding: 3rem">
+    <h2 class="color">Knowledge Graph Search and Text to Speech API</h2><br><hr>
+    <br>
+    <h3 class="color">Knowledge graph API:</h3><br>
+    <div class="text-left">The knowledge Graph Search API lets us find the entities in the Google Knowledge Graph.
+        The current API we used retrieves the image of the person, name and description of the image.</div><br><br>
+    <h3 class="color">Text to Speech API:</h3><br>
+    <div class="text-left">This API converts the text to speech format.
+        In our project this API is used to tell about the person description that we retrieved in Knowledge graph API.</div>
+
+
+</div>
+</body>
+</html>

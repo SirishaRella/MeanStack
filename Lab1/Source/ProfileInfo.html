@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+    <script src="HomePage.js"></script>
+</head>
+<body>
+<div ng-app="homeApp" ng-controller="homeController">
+    <nav class="navbar navbar-inverse" >
+        <div class="header">
+            <div class="navbar-header">
+                <h1 class="title">Knowledge Graph Search</h1>
+            </div>
+            <ul class="nav navbar-nav" >
+                <li class="active"><a href="ProfileInfo.html" class="tabs">Profile Info</a></li>
+                <li><a href="HomePage.html" class="tabs">Home</a></li>
+                <li><a href="AboutPage.html" class="tabs">About</a></li>
+                <li><a href="ContactPage.html" class="tabs">Contact us</a></li>
+                <li><a href="index.html" class="tabs">LogOut</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="footer text-center">
+        <img ng-src="{{imageUrl}}" class="profImage">
+        <h1 ng-model="name">{{name}}</h1>
+        <p class="color" ng-model="email">{{email}}</p>
+        <p ng-model="address" class="color">{{address}}</p>
+        <p ng-model="phno" class="color">{{phno}}</p>
+    </div>
+</div>
+</body>
+</html>

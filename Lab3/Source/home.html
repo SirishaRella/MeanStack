@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+    <script src="home.js"></script>
+
+</head>
+
+<body ng-app="homeApp" ng-controller="homeController">
+<div class="container text-center" style="margin-top:13px" >
+    <form ng-submit="predictImage()">
+    <label class="btn btn-default">
+        URL <input type="text" id="siri">
+    </label>
+    <input type="submit" class="btn btn-default" value="Predict Image">
+    <div class="notes"></div>
+    </form><br><br>
+    <table class="results" id="resultsData"></table><br><br>
+    <div class="container text-center" ng-hide="visible">
+    <form method="post">
+    <label class="btn btn-default">
+        Keyword <input type="text" id="crud">
+    </label>
+    <input type="submit" class="btn btn-default" value="Retrieve" ng-click="retrieve()">
+    <input type="submit" class="btn btn-default" value="Delete" ng-click="delete()">
+    </form><br><br>
+    </div>
+    <table class="results container text-center" id="retrieveData">
+
+    </table><br><br>
+    <div class="container text-center" ng-hide="visible">
+    <label class="btn btn-default">
+        Current <input type="text" id="old">
+        New <input type="text" id="new">
+    </label>
+    <input type="submit" class="btn btn-default" value="Update" ng-click="update()">
+    </div>
+</div>
+</body>
+</html>

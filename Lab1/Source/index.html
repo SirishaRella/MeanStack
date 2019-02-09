@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knowledge Search API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="google-signin-client_id" content="654850278343-pnk1vt58bss5ifjjl46h439jl24o9cj5.apps.googleusercontent.com">
+
+    <!-- Google API script we need inorder to sign in-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<div ng-app="cdmApp" ng-controller="cdmController">
+    <div class="header">
+        <h1 class="title">Knowledge Graph Search</h1>
+        <form class="form-inline text-center">
+            <div class="form-group">
+                <label class="logincolor">  Email:</label>
+                <input type="text" placeholder="Enter email" ng-model="uname"/>
+            </div>
+            <div class="form-group">
+                <label class="logincolor">  Password:</label>
+                <input type="password" placeholder="Enter password" ng-model="loginpwd">
+            </div>
+            <button class="btn btn-primary logincolor" ng-click="loginCheck()"><i class="fa fa-male"></i>  Login</button>
+        </form>
+    </div>
+    <div class="footer">
+        <h1 class="color rightcontent text-center">Create a new account</h1>
+        <div class="container-flud text-center rightcontent">
+            <form>
+                <div class="form-group">
+                    <label class="color col-sm-5">Name:</label>
+                    <input type="text" ng-model="name" placeholder="Enter name" name="name" class="col-sm-*">
+                </div>
+                <div class="form-group">
+                    <label class="color col-sm-5">Email:</label>
+                    <input type="email" ng-model="email" placeholder="Enter email" name="email" class="col-sm-*">
+                </div>
+                <div class="form-group">
+                    <label class="color col-sm-5">Phone Number:</label>
+                    <input type="text" ng-model="phno" placeholder="Enter Phone number" class="col-sm-*">
+                </div>
+                <div>
+                    <label class="color col-sm-5">Address:</label>
+                    <textarea ng-model="address" placeholder="Enter address here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="color col-sm-5">Password:</label>
+                    <input type="password" ng-model="pwd" placeholder="Enter password" name="pwd">
+                </div>
+                <div class="form-group">
+                    <label class="color col-sm-5">Retype Password:</label>
+                    <input type="password" ng-model="retypepwd" placeholder="Retype password" name="retypepwd">
+                </div>
+                <div class="buttons text-center">
+                    <button ng-click="storeData()" class="btn btn-success col-sm-*"><i class="fa fa-user-plus"></i>  Create an account</button><br><br>
+                    <h5 class="color">Sign in using Google account</h5>
+                    <button class="g-signin2" data-onsuccess="onSignIn"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
