@@ -1,0 +1,39 @@
+.imageBlock{
+    display: inline-flex;
+    background: cadetblue;
+    margin: 0 auto;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+.imgStyle{
+    width:200px;
+    height:200px;
+    display: inline-block;
+    margin:2rem;
+}
+.infoStyle{
+    font-weight: bold;
+    margin:0 auto;
+}
+h3{
+    color: aliceblue;
+}
+.navbar{
+    margin-top: -1.97rem !important;
+}
+.hospital{
+    position: absolute;
+    top: 80px;
+    right :25px;
+    display: inline-block;
+    color: aliceblue;
+    padding:3rem;
+    width :350px;
+    height:200px;
+
+}
+.show_hosp{
+    margin-left: 70px;
+    background: cadetblue;
+
+}

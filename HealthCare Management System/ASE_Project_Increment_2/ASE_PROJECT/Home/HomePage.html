@@ -1,0 +1,101 @@
+<html>
+<head>
+<!-- Bootstrap CDN Library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../HCDMS/HCDMS.css">
+<link rel="stylesheet" href="../ProfileInfo/profile_info.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- FireBase Repository -->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <!--Tessreact-->
+<script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js"></script>
+
+    <script>
+        function onLoad() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init();
+            });
+        }
+        function signOut()
+        {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+                window.location="../HCDMS/HCDMS.html"
+            });
+        }
+    </script>
+
+
+
+
+
+    <!--Ouath -->
+    <meta name="google-signin-client_id" content="654850278343-pnk1vt58bss5ifjjl46h439jl24o9cj5.apps.googleusercontent.com">
+
+    <!-- Google API script we need inorder to sign in-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+
+<script src="HomePage.js"></script>
+    <script type="text/javascript">
+        window.setTimeout('checkIfContinue()', 5*1000);  //10 minutes
+
+        function checkIfContinue()
+        {
+            if(confirm("Do you want to continue?"))
+            {
+                window.setTimeout('checkIfContinue()', 5*1000);  //start the timer again
+            }
+            else
+            {
+                window.location = 'http://localhost:63342/ASE_PROJECT/HCDMS/HCDMS.html?_ijt=1vsh6i0i47ockehpqmd748fa85';
+
+
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                    window.location="../HCDMS/HCDMS.html"
+                });
+
+
+
+
+            }
+        }
+    </script>
+</head>
+<body ng-app="homeApp" ng-controller="homeController">
+<nav class="navbar navbar-inverse" style="margin-top: -2.97rem !important;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealthCare Management System</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../ProfileInfo/profile_info.html"><span class="glyphicon glyphicon-user"></span> Profile Info</a></li>
+            <li class="active"><a href="../Home/HomePage.html">Homsaqa11e</a></li>
+            <li><a href="../Content/Content.html">Content</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="../myUploads/myuploads.html">My Uploads</a></li>
+            <li><a href="../ContactInfo/Contact_info.html">Contact Us</a></li>
+            <li><a onclick="logout()" href="../HCDMS/HCDMS.html" ><span class="glyphicon glyphicon glyphicon-off"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="text-center registration uploadImage row">
+<div class="col-sm-4 fontstyle uploadLabel">Extract the Text:</div>
+<div class="col-sm-4"><input type="file" ng-model="fileUploaded" value="Upload" id="fileImageUploaded"></div><br><br>
+<div class="col-sm-4 fontstyle uploadLabel">Upload your Image:</div>
+<div class="col-sm-4"><input type="file" ng-model="fileImageUploaded" value="Upload" id="fileUploader"></div><br><br>
+<button class="btn btn-primary text-center" ng-click="uploadImage()">Upload Info</button>
+<div id="ocr_status"></div>
+</div>
+</body>
+</html>

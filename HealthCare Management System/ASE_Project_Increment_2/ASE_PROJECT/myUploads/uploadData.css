@@ -1,0 +1,18 @@
+.uploadData{
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    top: 1.5rem;
+    position: relative;
+}
+.uploadcontent{
+    margin-left:3rem;
+    width:23rem;
+    height: 23rem;
+    background-color: cadetblue;
+    display: inline-block;
+}
+.navbar{
+    margin-top: -2.97rem !important;
+}

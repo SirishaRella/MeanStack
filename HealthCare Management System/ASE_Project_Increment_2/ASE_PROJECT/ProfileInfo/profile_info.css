@@ -1,0 +1,23 @@
+.profileInfo{
+    width: 30rem;
+    height: auto;
+    margin-left: 5rem;
+    margin-top: 7rem;
+    background-color: cadetblue;
+}
+.navbar-inverse .navbar-brand{
+    background-color: cadetblue !important;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: cadetblue !important;
+}
+.navbar{
+    background-color: cadetblue !important;
+    border:1px solid cadetblue;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:white !important;
+}
+.navbar-invers{
+    border-color:cadetblue !important;
+}

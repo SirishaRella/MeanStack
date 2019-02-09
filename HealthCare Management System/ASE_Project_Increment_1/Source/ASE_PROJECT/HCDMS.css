@@ -1,0 +1,52 @@
+body{
+    background-image: url("home_wallpaper.jpg");
+}
+.heading{
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    background-color: black;
+}
+.fontstyle{
+    color:black;
+    font-weight:bold;
+    float:left;
+}
+.registration{
+    top: 4rem;
+    position: relative;
+    background-color: lavender;
+    width:30rem;
+    margin:0 auto;
+    padding:1rem;
+    border-radius: 1rem;
+}
+.navbar-brand{
+    font-size: 3rem !important;
+}
+button.btn.btn-default.glyphicon-search.glyphicon {
+    display: table-footer-group;
+}
+.navbar-inverse .navbar-brand {
+    color: white !important;
+    background-color: black !important;
+}
+.uploadImage{
+    width:50rem;
+}
+.uploadLabel{
+    color: darkblue;
+
+}
+#fileUploader{
+    margin:0 auto;
+}
+.g-signin2 {
+    background: white;
+    color: #444;
+    width: 132px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+}

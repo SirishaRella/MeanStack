@@ -1,0 +1,61 @@
+body{
+    background-image: url("../Home/bgImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:3rem;
+}
+.heading{
+    color: white;
+    font-size: 3rem;
+    background-color: cadetblue;
+}
+.fontstyle{
+    color:white;
+    font-weight:bold;
+    float:left;
+}
+.registration{
+    top: 4rem;
+    position: relative;
+    background-color: darkcyan;
+    width:fit-content;
+    margin-left:2rem;
+    padding:1rem;
+    border-radius: 1rem;
+}
+.navbar-brand{
+    font-size: 3rem !important;
+}
+button.btn.btn-default.glyphicon-search.glyphicon{
+    display: table-footer-group;
+}
+.navbar-inverse .navbar-brand {
+    color: white !important;
+    background-color: black !important;
+}
+.uploadImage{
+    width:50rem;
+}
+.uploadLabel{
+    color: aliceblue;
+
+}
+.btn-primary {
+ background-color:cadetblue !important;
+    border-color: floralwhite !important;
+}
+#fileUploader{
+    margin:0 auto;
+}
+.container-fluid{
+    padding-left: 0px !important;
+}
+.g-signin2 {
+    background: white;
+    color: #444;
+    width: 132px;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+}

@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<!-- Bootstrap CDN Library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="HCDMS.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <!-- FireBase Repository -->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script src="HomePage.js"></script>
+</head>
+<body>
+<div ng-app="homeApp" ng-controller="homeController">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealthCare Content Data Management System</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="HomePage.html">Home</a></li>
+            <li><a href="Contact_info.html">Contact Us</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default glyphicon-search glyphicon"></button>
+                </div>
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="profile_info.html"><span class="glyphicon glyphicon-user"></span> Profile Info</a></li>
+            <li><a href="HCDMS.html"><span class="glyphicon glyphicon glyphicon-off"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="text-center registration uploadImage row">
+<div class="col-sm-4 fontstyle uploadLabel">Upload your Image:</div>
+<div class="col-sm-4"><input type="file" ng-model="fileUploaded" value="Upload" id="fileUploader"></div><br><br>
+<h3 style="font-weight: bold">Add metadata to the Image</h3><br>
+        <form>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Created By:</label>
+                <input type="text" class="w3-round" placeholder="Enter name" ng-model="createdBy">
+            </div>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Created Date:</label>
+                <input type="date" class="w3-round" ng-model="createdDate">
+            </div>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Phone-number</label>
+                <input type="tel" class="w3-round" placeholder="Enter Phone number" ng-model="createdPhno">
+            </div>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Organ Category</label>
+                <input class="w3-round" placeholder="Enter Category" ng-model="createdCategory"/>
+            </div>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Disease Diagnosed:</label>
+                <input type="password"  class="w3-round" placeholder="Enter the disease" ng-model="createdDisease ">
+            </div>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Cost of Diagnosis:</label>
+                <input type="password" class="w3-round" placeholder="Enter the cost in USD" ng-model="createdCost">
+            </div>
+            <div class="form-group">
+                <label class="fontstyle col-sm-5">Prescriptions:</label>
+                <input type="password" class="w3-round" placeholder="Enter Prescriptions" ng-model="createdPrescriptions">
+            </div><br>
+            <button class="btn btn-primary col-sm-*" ng-click="uploadImage()">Upload</button>
+        </form>
+</div>
+</div>
+</body>
+</html>

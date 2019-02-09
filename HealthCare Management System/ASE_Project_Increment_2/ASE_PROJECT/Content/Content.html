@@ -1,0 +1,68 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../HCDMS/HCDMS.css">
+
+    <!-- Bootstrap CDN Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content.css">
+    <link rel="stylesheet" href="../ProfileInfo/profile_info.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- FireBase Repository -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script src="Content.js"></script>
+
+    <script type="text/javascript">
+        window.setTimeout('checkIfContinue()', 10*60*1000);  //10 minutes
+        function checkIfContinue()
+        {
+            if(confirm("Do you want to continue?"))
+            {
+                window.setTimeout('checkIfContinue()', 10*60*1000);  //start the timer again
+            }
+            else
+            {
+                window.location = 'timeout.html';
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                    console.log('User signed out.');
+                    window.location="../HCDMS/HCDMS.html"
+                });
+            }
+        }
+    </script>
+</head>`
+<body ng-app="contentApp" ng-controller="contentController">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealthCare Management System</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../ProfileInfo/profile_info.html"><span class="glyphicon glyphicon-user"></span> Profile Info</a></li>
+            <li><a href="../Home/HomePage.html">Home</a></li>
+            <li class="active"><a href="../Content/Content.html">Content</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="search-bar">
+                <input type="text" name="search" value="" autocomplete="off" id="myinput" ng-keyup="searchFunction()" placeholder="Search">
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="../myUploads/myuploads.html">My Uploads</a></li>
+            <li><a href="../ContactInfo/Contact_info.html">Contact Us</a></li>
+            <li><a href="../HCDMS/HCDMS.html"><span class="glyphicon glyphicon glyphicon-off"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div ng-bind-html="myHTML" id="myHTML">
+</div>
+<div ng-app="contentApp" ng-controller="hospitalController"  class="hospital" style="background: cadetblue" >
+    <button ng-click="click()" class="show_hosp" id="hospitals">Show Hospitals</button>
+    <li ng-repeat="hospitals in hospitalsList" ng-show="hosp">
+        {{hospitals.name}}
+    </li>
+</div>
+</body>
+</html>

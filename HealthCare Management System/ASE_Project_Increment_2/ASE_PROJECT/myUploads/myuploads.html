@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../HCDMS/HCDMS.css">
+    <link rel="stylesheet" href="uploadData.css">
+    <link rel="stylesheet" href="../ProfileInfo/profile_info.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- FireBase Repository -->
+   <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+    <script src="myUploads.js"></script>
+
+</head>
+<body ng-app="myUploadsApp" ng-controller="myUploadsController">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealthCare Content Data Management System</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../ProfileInfo/profile_info.html"><span class="glyphicon glyphicon-user"></span> Profile Info</a></li>
+            <li><a href="../Home/HomePage.html">Home</a></li>
+            <li><a href="../Content/Content.html">Content</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="../myUploads/myuploads.html">My Uploads</a></li>
+            <li><a href="../ContactInfo/Contact_info.html">Contact Us</a></li>
+            <li><a href="../HCDMS/HCDMS.html"><span class="glyphicon glyphicon glyphicon-off"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="uploadsHTML">
+
+</div>
+</body>
+</html>
