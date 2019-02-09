@@ -1,4 +1,4 @@
-High level of all assignments and Projects description is written in below links:
+# High level of all assignments and Projects description is written in below links:
 
 Project-Proposal:
 https://github.com/SirishaRella/MeanStack-Software-Engineering/wiki/Project-Proposal
@@ -14,7 +14,7 @@ https://github.com/SirishaRella/MeanStack-Software-Engineering/wiki/Project_Incr
 
 ________________________________________________________________________________________________________________________________________
 
-Lab Assignments:
+# Lab Assignments:
 
 Lab-1:
 https://github.com/SirishaRella/MeanStack-Software-Engineering/wiki/Lab1
@@ -26,7 +26,7 @@ Lab-3:
 https://github.com/RajeshwariCh/CS5551-LAB3/wiki/LAB3
 
 ________________________________________________________________________________________________________________________________________
-In Class Programming:
+# In Class Programming:
 
 ICP-1:
 https://github.com/SirishaRella/MeanStack-Software-Engineering/wiki/ICP-1
