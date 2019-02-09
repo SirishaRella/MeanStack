@@ -1,4 +1,4 @@
-# High level of all assignments and Projects description is written in below links:
+# Project - HealthCare Management system:
 
 Project-Proposal:
 https://github.com/SirishaRella/MeanStack-Software-Engineering/wiki/Project-Proposal
