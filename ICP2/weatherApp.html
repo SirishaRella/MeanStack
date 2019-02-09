@@ -1,0 +1,57 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="weatherApp.js"></script>
+</head>
+<style>
+    table, th , td {
+        padding: 4px;
+        border: 0.5px solid grey;
+        border-collapse: collapse;
+        width:70%
+    }
+    table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+    }
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+</style>
+<body style="background-color: gainsboro">
+<div class="container-fluid text-center" ng-app="weatherApp" ng-controller="weatherControl">
+    <h2 style="color:grey">Weather Report</h2><br>
+
+    <!-- Form to accept the input from the user-->
+    <form>
+        <span>State Code: </span><input type="text" placeholder="Enter State Code" ng-model="stateCode"><br><br>
+        <span>City Name: </span><input type="text" placeholder="Enter City Name" ng-model="cityName"><br><br>
+        <input type="button" class="btn-info" value="Get Current Weather" ng-click="getCurrentWeather()">
+        <div ng-show="visible">{{cityName}}, {{stateCode}}</div>
+        <div ng-show="visible">{{weather}}</div>
+        <div ng-show="visible"><img src={{icon}}> </div>
+        <span ng-show="visible">{{temperature}}&deg; F</span><br><br>
+        <input type="button" class="btn-info" value="Get Hourly Weather" ng-click="getHourlyWeather()" ng-show="visible">
+    </form>
+    <h4 ng-show="hourlyTable" style="color:grey">Weather forecast for next five hours</h4>
+
+    <!-- Table to display the hourly weather data -->
+    <table ng-show="hourlyTable" style="margin: 0 auto">
+        <tr>
+            <th>Time</th>
+            <th>Condition</th>
+            <th>Humidity</th>
+            <th>Temperature</th>
+        </tr>
+        <tr ng-repeat="i in [0,1,2,3,4]">
+            <td>{{hourlyData[i].FCTTIME.civil}}<img src={{hourlyData[i].icon_url}}></td>
+            <td>{{ hourlyData[i].condition}}</td>
+            <td>{{ hourlyData[i].humidity}}</td>
+            <td>{{ hourlyData[i].temp.english}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
