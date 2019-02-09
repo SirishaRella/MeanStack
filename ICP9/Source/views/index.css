@@ -1,0 +1,9 @@
+body{
+    background-color: gainsboro;
+    padding:2rem;
+}
+h1{
+    color: #337ab7;
+    font-weight: bold;
+    font-size: 3rem;
+}

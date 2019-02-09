@@ -1,0 +1,17 @@
+html
+    head
+        title Person
+    style
+        include index.css
+    body
+    h1.text-center Search Details
+    form(action = "/search", method = "POST")
+        .form-group
+            label Search Keyword:
+            input.form-control(type='text', name='search')
+        .text-center
+        button(type = "submit") Search
+        h3 Results
+        id: #{details}
+
+
